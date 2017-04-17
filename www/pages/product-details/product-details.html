@@ -1,0 +1,90 @@
+<!--
+  Generated template for the ProductDetails page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>{{ 'Product' | translate }}</ion-title>
+    <ion-buttons *ngIf="org=='carttab'" end>
+      <button ion-button (click)="closeModal()">
+        <ion-icon name="ios-close-circle-outline"></ion-icon>
+        </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-fab top right edge  *ngIf="product!=null && product.vendor_id!=null">
+    <button color="twitter" ion-fab (click)="gotoVendor()"><ion-icon name="MYICON"></ion-icon></button>
+  </ion-fab>
+
+  <div *ngIf="product">
+
+
+    <ion-slides *ngIf="selVariation==null" [options]="mySlideOptions">
+      <ion-slide *ngFor="let img of slideImages">
+        <img src="{{img.src}}" />
+      </ion-slide>
+    </ion-slides>
+    <ion-row *ngIf="selVariation!=null" class="top-img">
+      <img src="{{variationImg}}" />
+    </ion-row>
+    <div padding>
+      <h3 class="title">{{product.name}}</h3>
+      <div>
+        <b>{{product.price}}</b> <b #currencyFormat [innerHTML]="appConfig.Shop_Currency_format"></b>
+        <del ng-show="product.regular_price > 0 && product.on_sale"></del>
+        <span class="pull-right" (click)="share()">
+	        		<!--<ion-icon name="share" color="primary"></ion-icon> <b color="primary">{{ 'Share' | translate }}</b>-->
+	        	</span>
+      </div>
+    </div>
+    <ion-list *ngIf="product.attributes.length>0">
+      <ion-list-header class="item-header">
+        {{ 'PRODUCT_Attributes' | translate }}
+      </ion-list-header>
+      <button ion-item *ngFor="let attribute of product.attributes;" (click)="attributeSelected(attribute)">
+        {{attribute.name}}<span item-right>{{getSelectedOption(attribute.name)}}</span>
+      </button>
+    </ion-list>
+    <ion-list>
+      <ion-list-header class="item-header">
+        {{ 'PRODUCT_DESCRIPTION' | translate }}
+      </ion-list-header>
+      <ion-item [innerHTML]="product.description" class="desc"></ion-item>
+    </ion-list>
+     <ion-list *ngIf="product.vendor_id!=null" >
+      <ion-list-header class="item-header">
+        {{product.shop_name}}
+      </ion-list-header>
+      <ion-item [innerHTML]="product.shop_desc" class="desc"></ion-item>
+    </ion-list>
+	
+   <div align="center"><button class="sss" (click)="gotoVendor()">Перейти в магазин поставщика!</button></div><br />
+
+  </div>
+</ion-content>
+<ion-footer border-top>
+  <ion-grid>
+    <ion-row>
+      <ion-col width-100>
+        <ion-chip (click)="addWishlist()">
+          <ion-icon name="heart" [color]="isFav?'primary':'dark'"></ion-icon>
+        </ion-chip>
+        <!--<ion-chip (click)="gotoVendor()">
+          <ion-icon name="MYICON" [color]="primary"></ion-icon>
+        </ion-chip>-->
+        <!--<ion-chip margin-left (click)="goToCart()">
+          <ion-icon name="cart" color="primary"></ion-icon>
+          <ion-label>{{cartProductNumber}}</ion-label>
+        </ion-chip>
+      </ion-col>-->
+      <!--<ion-col width-50 class="chip-button">
+        <ion-chip [class.chip-enable]="selVariation!=null || hasVariation==false" (click)="addCartClip()">
+          <ion-label>{{ 'Add_to_cart' | translate }}</ion-label>
+        </ion-chip>-->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

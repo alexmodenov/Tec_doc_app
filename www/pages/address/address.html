@@ -1,0 +1,87 @@
+<!--
+  Generated template for the Address page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>{{ 'Adderss' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="commonbg">
+  <ion-list>
+    <ion-item-group>
+      <ion-item-divider color="light">{{ 'Shipping_Address' | translate }}</ion-item-divider>
+      <ion-item>
+        <ion-input type="text" placeholder="{{ 'First_Name' | translate }}" [(ngModel)]="shippingAddress.first_name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="{{ 'Last_Name' | translate }}" [(ngModel)]="shippingAddress.last_name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="email" placeholder="{{ 'Email' | translate }}" [(ngModel)]="shippingAddress.email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="phone" placeholder="{{ 'Phone' | translate }}" [(ngModel)]="shippingAddress.phone"></ion-input>
+      </ion-item>
+      <ion-item (click)="selectCountry('shipping')">
+        <ion-label>{{shippingAddress.country==''?('Select_Country'| translate):shippingAddress.country}}</ion-label>
+        <ion-icon name="arrow-forward" item-right></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="{{ 'Address1' | translate }}" [(ngModel)]="shippingAddress.address_1"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="{{ 'Address2' | translate }}" [(ngModel)]="shippingAddress.address_2"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="{{ 'Town_City' | translate }}" [(ngModel)]="shippingAddress.city"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="{{ 'State' | translate }}" [(ngModel)]="shippingAddress.state"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="{{ 'Zip_Code' | translate }}" [(ngModel)]="shippingAddress.zip"></ion-input>
+      </ion-item>
+    </ion-item-group>
+     <ion-item-divider color="light">
+       <ion-label>{{ 'Billing_Address_Same_as_Shipping' | translate }}</ion-label>
+        <ion-checkbox color="dark" [(ngModel)]="sameAddress" item-right ></ion-checkbox>
+      </ion-item-divider>
+    <ion-item-group *ngIf="!sameAddress" >
+      <ion-item>
+        <ion-input type="text" placeholder="{{ 'First_Name' | translate }}" [(ngModel)]="billingAddress.first_name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="{{ 'Last_Name' | translate }}" [(ngModel)]="billingAddress.last_name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="email" placeholder="{{ 'Email' | translate }}" [(ngModel)]="billingAddress.email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="phone" placeholder="{{ 'Phone' | translate }}" [(ngModel)]="billingAddress.phone"></ion-input>
+      </ion-item>
+      <ion-item (click)="selectCountry('billing')">
+        <ion-label>{{billingAddress.country==''?('Select_Country'| translate) :billingAddress.country}}</ion-label>
+        <ion-icon name="arrow-forward" item-right></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="{{ 'Address1' | translate }}" [(ngModel)]="billingAddress.address_1"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="{{ 'Address2' | translate }}" [(ngModel)]="billingAddress.address_2"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="{{ 'Town_City' | translate }}" [(ngModel)]="billingAddress.city"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="{{ 'State' | translate }}" [(ngModel)]="billingAddress.state"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="{{ 'Zip_Code' | translate }}" [(ngModel)]="billingAddress.zip"></ion-input>
+      </ion-item>
+    </ion-item-group>
+  </ion-list>
+</ion-content>
+<ion-footer text-center><button class="save-button" ion-button color="primary" round (click)="saveAddress()">{{ 'Save' | translate }}</button></ion-footer>

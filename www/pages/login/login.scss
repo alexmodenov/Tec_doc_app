@@ -1,0 +1,26 @@
+page-login .header p {
+  color: #8a949d;
+  float: right;
+  margin-right: -2rem;
+  margin-top: 1rem;
+}
+
+page-login .header img {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+page-login form {
+  width: 96%;
+  margin-left: 2rem;
+}
+
+page-login ion-label {
+  min-width: 25px;
+}
+
+page-login .logo-img {
+  width: 80px;
+  height: 80px;
+}

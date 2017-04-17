@@ -1,0 +1,46 @@
+<!--
+  Generated template for the Profile page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+			</button>
+    <ion-title>{{ 'Profile' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="commonbg">
+  <div class="user-info-header" text-center padding-top>
+    <div *ngIf="userService.isAuthenticated">
+      <p>{{ 'Welcome' | translate }} {{userService.name}}</p>
+      <p>{{userService.email}}</p>
+    </div>
+    <button *ngIf="!userService.isAuthenticated" ion-button color="light" outline (click)="login()">{{ 'Sign_In' | translate }}</button>
+  </div>
+  <div class="settings">
+    <ion-list inset>
+      <!--<ion-item (click)="openOrderList()">
+        <ion-icon name="ios-basket-outline" item-left></ion-icon>
+        <h2>{{ 'My_Orders' | translate }}</h2>
+        <ion-icon name="arrow-forward" item-right></ion-icon>
+      </ion-item>-->
+      <!--<ion-item (click)="openEditAddress()">
+        <ion-icon name="ios-settings-outline" item-left></ion-icon>
+        <h2>{{ 'Shipping_Address' | translate }}</h2>
+        <ion-icon name="arrow-forward" item-right></ion-icon>
+      </ion-item>-->
+      <ion-item (click)="openWishlist()">
+        <ion-icon name="ios-settings-outline" item-left></ion-icon>
+        <h2>{{ 'Wishlist' | translate }}</h2>
+        <ion-icon name="arrow-forward" item-right></ion-icon>
+      </ion-item>
+	  <ion-item (click)="loginOut()" *ngIf="userService.isAuthenticated">
+        <ion-icon name="ios-log-out-outline" item-left></ion-icon>
+        <h2>{{ 'Login_Out' | translate }}</h2>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

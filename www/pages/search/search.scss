@@ -1,0 +1,136 @@
+page-search .empty {
+  text-align: center;
+  padding: 50px;
+}
+
+page-search .searchbar-ios .searchbar-search-icon{
+    background-size: 18px !important;
+    width: 18px !important;
+    height: 18px !important;
+}
+
+page-search .searchbar-md .searchbar-search-icon{
+    background-size: 25px !important;
+    width: 25px !important;
+    height: 25px !important;
+}
+
+page-search .searchbar-wp .searchbar-search-icon{
+    background-size: 25px !important;
+    width: 25px !important;
+    height: 25px !important;
+}
+
+page-search ion-grid ion-row {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+page-search ion-grid ion-row ion-col .card {
+  overflow: hidden;
+  font-size: 0.9em;
+}
+
+page-search ion-grid ion-row ion-col .card img {
+ width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+page-search ion-grid ion-row ion-col .card .title{
+    display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+page-search .padding-xs {
+  padding: 10px;
+}
+
+page-search .card.round {
+  overflow: hidden;
+}
+
+page-search.round {
+    border-radius: 5px;
+}
+
+page-search .card {
+  background: #FFF;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+page-search .badge {
+    position: absolute;
+    z-index: 3;
+    top: 15px !important;
+    right: 15px !important;
+}
+page-search .badge > span {
+    position: relative;
+    display: block;
+    background: #ccc;
+    color: white;
+    padding: 0 3px 0 10px;
+    font-size: 10px;
+    text-transform: uppercase;
+    line-height: 22px;
+    height: 20px !important;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+page-search .badge > span:before {
+    border-right-color: #cccccc;
+    content: "";
+    float: left;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border-color: transparent #ccc transparent transparent;
+    border-style: solid;
+    border-width: 10px 10px 10px 0;
+}
+page-search .badge > span:after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0px;
+    float: left;
+    width: 7px;
+    height: 7px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    background: #fff;
+}
+page-search .badge > span.sale:before {
+    border-right-color: orange;
+    border-color: transparent orange transparent transparent;
+}
+page-search .badge > span.sale{
+    background: orange;
+}
+page-search .badge > span.sale:after{
+    background: white;
+}
+
+page-search .badge > span.sold:before {
+    border-right-color:mediumseagreen;
+    border-color: transparent mediumseagreen transparent transparent;
+}
+page-search .badge > span.sold{
+    background: mediumseagreen;
+}
+page-search .badge > span.sold:after{
+    background: white;
+}

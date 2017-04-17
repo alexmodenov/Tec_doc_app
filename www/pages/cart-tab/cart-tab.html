@@ -1,0 +1,60 @@
+<!--
+  Generated template for the CartTab page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+			</button>
+    <ion-title>{{ 'Cart' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content class="common-bg">
+
+  <div *ngIf="isEmpty" class="empty">
+    <img src="assets/img/cart.png">
+    <h3>{{ 'Cart_is_empty' | translate }}</h3>
+    <button ion-button round (click)="goHome()">{{ 'Let_us_shopping' | translate }}</button>
+  </div>
+  <div *ngIf="!isEmpty">
+    <div *ngFor="let item of cart; let i = index" class="div-cart-item">
+      <ion-row class="div-product" (click)="viewProduct(item.product_id)">
+        <ion-col width-33>
+          <img src="{{ item.thumb }}">
+        </ion-col>
+        <ion-col width-67>
+          <div margin-left>
+            <div text-wrap>{{ item.name }}</div>
+            <div class="text-sm"> <span color="gray">{{ item.variation_name }}</span> </div>
+            <div padding-bottom> <span class="pull-right" [innerHTML]="appConfig.Shop_Currency_format+item.price"></span>
+              <div class="clear"></div>
+            </div>
+            <div>
+              <div class="input-qty"> <span class="btn" (click)="subQuantity(item)">
+                <b>-</b>
+              <!--<ion-icon name="ios-remove" color="white" (click)="subQuantity(item)"></ion-icon>-->
+              </span> <input type="text" [(ngModel)]="item.quantity" (click)="inputNum()" (blur)='inputChanged(item)'> <span class="btn" (click)="addQuantity(item)">
+                  <!--<ion-icon name="ios-add" color="white" (click)="addQuantity(item)"></ion-icon>-->
+                   <b>+</b>
+                  </span>
+                <div class="clear"></div>
+              </div>
+              <div class="pull-right bottom-info text-lg trash-btn">
+                <ion-icon name="trash" color="primary" (click)="remove(item.product_id)" class="pull-right"></ion-icon>
+                <div class="clear"></div>
+              </div>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </div>
+  <div class="placehold"></div>
+</ion-content>
+<ion-footer class="cart-footer" padding>
+  <ion-title> <span color="gray">{{ 'Total' | translate }}</span> <br/> <span class="bold" color="danger"><b [innerHTML]="appConfig.Shop_Currency_format"></b>{{ total}}</span> </ion-title>
+  <ion-buttons end> <button ion-button color="danger" [disabled]="!cart || cart.length==0" (click)="checkout()">      {{ 'CHECKOUT' | translate }}    </button>    </ion-buttons>
+</ion-footer>

@@ -1,0 +1,28 @@
+<ion-menu [content]="content">
+  <ion-content class="outer-content" no-border-top>
+    <ion-list>
+      <ion-list-header>
+        <img align="center" src="http://moykkbd.ru/wp-content/uploads/2017/04/logo-tecdoc2.png">
+		<!--Скидки на автозапчасти от TEC-DOC.RU-->
+      </ion-list-header>
+      <ion-item menuClose (click)="goHome()">
+        <ion-icon name="ios-home-outline"></ion-icon>
+        Все скидки
+      </ion-item>
+      <ion-item menuClose (click)="modalContact()">
+        <ion-icon name="ios-mail-outline"></ion-icon>
+        Свяжитесь с нами
+      </ion-item>
+      <ion-item menuClose (click)="modalFaq()">
+        <ion-icon name="ios-information-circle-outline"></ion-icon>
+        Как получить скидку?
+      </ion-item>
+      <ion-item menuClose (click)="modalAbout()">
+        <ion-icon name="ios-globe-outline"></ion-icon>
+        О приложении
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+

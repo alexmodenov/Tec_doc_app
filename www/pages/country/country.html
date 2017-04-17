@@ -1,0 +1,21 @@
+<!--
+  Generated template for the Country page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>{{ 'Select_Country' | translate }}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-item-group *ngFor="let gCountry of countries">
+    <ion-item-divider>
+      {{gCountry.group}}
+    </ion-item-divider>
+    <ion-item *ngFor="let country of gCountry.Countries" (click)="selCountry(country.fn)">{{country.fn}}
+      <ion-icon *ngIf="selectedCountry==country.fn" name="checkmark" item-right></ion-icon>
+    </ion-item>
+  </ion-item-group>
+</ion-content>
