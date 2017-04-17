@@ -84,11 +84,11 @@
   <feature name="StatusBar">
     <param name="ios-package" onload="true" value="CDVStatusBar"/>
   </feature>
-  <gap:plugin name="cordova-plugin-device" source="npm" />
-  <gap:plugin name="cordova-plugin-console" source="npm" />
-  <gap:plugin name="cordova-plugin-whitelist" source="npm" />
-  <gap:plugin name="cordova-plugin-splashscreen" source="npm" />
-  <gap:plugin name="cordova-plugin-statusbar" source="npm" />
-  <gap:plugin name="ionic-plugin-keyboard" source="npm" />
+  <plugin name="cordova-plugin-device"  />
+  <plugin name="cordova-plugin-console"  />
+  <plugin name="cordova-plugin-whitelist"  />
+  <plugin name="cordova-plugin-splashscreen"  />
+  <plugin name="cordova-plugin-statusbar"  />
+  <plugin name="ionic-plugin-keyboard"  />
   <icon src="resources\android\icon\drawable-xhdpi-icon.png"/>
 </widget>
