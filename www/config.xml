@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.tec-doc-ru.start"
-        versionCode = "2" 
+        id          = "com.tec-doc-ru-1.start"
+        versionCode = "3" 
         version     = "1.0.0" >
-    <name>Tec-doc</name>
-  <description>Tec-doc Ionic/Cordova app.</description>
-  <author email="alexandermodenov@gmail.com" href="http:/www.tec-doc.ru/">Tec-doc.ru</author>
+  <name>TEC-DOC-APP</name>
+  <description>TEC-DOC-APP app.</description>
+  <author email="stromdesignpr@gmail.com" href="http:/www.tec-doc.ru/">Tec-doc.ru</author>
   <content src="index.html"/>
   <access origin="*"/>
   <allow-intent href="http://*/*"/>
@@ -15,8 +15,6 @@
   <allow-intent href="sms:*"/>
   <allow-intent href="mailto:*"/>
   <allow-intent href="geo:*"/>
-  <access origin="*.google.com"/>
-  <access origin="*.googleapis.com"/>
   <engine name="android" spec="~6.1.1"/>
   <platform name="android">
     <allow-intent href="market:*"/>
@@ -84,11 +82,11 @@
   <feature name="StatusBar">
     <param name="ios-package" onload="true" value="CDVStatusBar"/>
   </feature>
-  <plugin name="cordova-plugin-device"  />
-  <plugin name="cordova-plugin-console"  />
-  <plugin name="cordova-plugin-whitelist"  />
-  <plugin name="cordova-plugin-splashscreen"  />
-  <plugin name="cordova-plugin-statusbar"  />
-  <plugin name="ionic-plugin-keyboard"  />
+  <plugin name="cordova-plugin-device" spec="~1.1.3"/>
+  <plugin name="cordova-plugin-console" spec="~1.0.4"/>
+  <plugin name="cordova-plugin-whitelist" spec="~1.3.0"/>
+  <plugin name="cordova-plugin-splashscreen" spec="~4.0.0"/>
+  <plugin name="cordova-plugin-statusbar" spec="~2.2.0"/>
+  <plugin name="ionic-plugin-keyboard" spec="~2.2.1"/>
   <icon src="resources\android\icon\drawable-xhdpi-icon.png"/>
 </widget>
