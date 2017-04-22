@@ -85,7 +85,7 @@
     </feature>
     <gap:plugin name="cordova-plugin-device" source="npm" />
     <gap:plugin name="cordova-plugin-console" source="npm" />
-    <gap:plugin name="cordova-plugin-whitelist" spec="~1.3.0" />
+    <gap:plugin name="cordova-plugin-whitelist" source="npm" />
     <gap:plugin name="cordova-plugin-splashscreen" source="npm" />
     <gap:plugin name="cordova-plugin-statusbar" source="npm" />
     <gap:plugin name="ionic-plugin-keyboard" source="npm" />
