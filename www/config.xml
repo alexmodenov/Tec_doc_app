@@ -16,7 +16,6 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <engine name="android" spec="~6.1.1" />
-    <platform name="android">
         <allow-intent href="market:*" />
         <icon density="ldpi" src="www\resources\android\icon\drawable-ldpi-icon.png" gap:platform="android"    gap:qualifier="ldpi" />
         <icon density="mdpi" src="www\resources\android\icon\drawable-mdpi-icon.png" gap:platform="android"    gap:qualifier="mdpi" />
@@ -36,8 +35,6 @@
         <splash density="port-xhdpi" src="www\resources\android\splash\drawable-port-xhdpi-screen.png" gap:platform="android" gap:qualifier="port-xhdpi" />
         <splash density="port-xxhdpi" src="www\resources\android\splash\drawable-port-xxhdpi-screen.png" gap:platform="android" gap:qualifier="port-xxhdpi" />
         <splash density="port-xxxhdpi" src="www\resources\android\splash\drawable-port-xxxhdpi-screen.png" gap:platform="android" gap:qualifier="port-xxxhdpi" />
-    </platform>
-    <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
         <icon height="57" src="www\resources\ios\icon\icon.png" width="57" />
@@ -68,7 +65,6 @@
         <splash height="1024" src="www\resources\ios\splash\Default-Portrait~ipad.png" width="768" />
         <splash height="960" src="www\resources\ios\splash\Default@2x~iphone.png" width="640" />
         <splash height="480" src="www\resources\ios\splash\Default~iphone.png" width="320" />
-    </platform>
     <preference name="webviewbounce" value="false" />
     <preference name="UIWebViewBounce" value="false" />
     <preference name="DisallowOverscroll" value="true" />
@@ -89,6 +85,6 @@
     <gap:plugin name="cordova-plugin-splashscreen" source="npm" />
     <gap:plugin name="cordova-plugin-statusbar" source="npm" />
     <gap:plugin name="ionic-plugin-keyboard" source="npm" />
-    <icon src="resources\android\icon\drawable-xhdpi-icon.png" />
+    <icon src="www\resources\android\icon\drawable-xhdpi-icon.png" />
     <gap:plugin name="ionic-plugin-deploy" source="npm" />
 </widget>
