@@ -50569,7 +50569,7 @@ page-faq ion-icon::before {
 
 page-home ion-content {
   /*background: #e4e9ee !important;*/
-  background: url("http://moykkbd.ru/wp-content/uploads/2017/04/spl.jpg");
+  background: url("http://moykkbd.ru/wp-content/uploads/2017/04/background.jpg");
 }
 
 page-home ion-slides {
@@ -50706,6 +50706,69 @@ page-home ins {
 #map {
   width: 100%;
   height: 200px;
+}
+
+page-home-google-map #map {
+  height: 100%;
+}
+
+page-home-google-map .vendor-button {
+  display: block;
+  margin-top: 5px;
+  height: 50px;
+  width: 100%;
+  background: #00b7ea;
+  /*TYPE*/
+  color: white;
+  font: 17px/50px Helvetica, Verdana, sans-serif;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+page-home-google-map .first-product {
+  height: 60px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+page-home-google-map .other-product {
+  height: 60px;
+  margin-top: 5px;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-flex;
+}
+
+page-home-google-map .first-product img {
+  width: 60px;
+  height: 60px;
+}
+
+page-home-google-map .other-product img {
+  width: 60px;
+  height: 60px;
+}
+
+page-home-google-map .first-product .product-content {
+  margin-left: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+page-home-google-map .first-product .product-title {
+  overflow: hidden;
+}
+
+page-home-google-map .other-product .product-content {
+  margin-left: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+page-home-google-map .other-product .product-title {
+  overflow: hidden;
 }
 
 page-listings ion-grid ion-row {
@@ -51003,7 +51066,7 @@ page-profile ion-header:after {
 
 page-profile .user-info-header {
   height: 20vh;
-  background: #fd5459;
+  background: #F44B28;
   border-radius: 0 0 100% 100%;
   color: white;
 }
